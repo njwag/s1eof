@@ -42,3 +42,5 @@ $ python s1eof.py -h
 							End date for orbit file search "YYYY-MM-DD"
 	  -o, --overwrite       Overwrite output file (if present)
 ```
+
+Note: I do not control, guarantee, approve, or endorse the information or products available on the sites linked.
