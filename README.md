@@ -2,7 +2,7 @@
 
 ## General information
 
-Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](https://scihub.copernicus.eu/gnss/#/home). The software can automatically detect Sentinel-1 files (zipped or unzipped) thath conform to the Sentinel-1 naming convention. Alternatively the user can choose to download all orbit files for a given date range or download the full archive.
+Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](https://scihub.copernicus.eu/gnss/#/home). The software can automatically detect Sentinel-1 files (zipped or unzipped) that conform to the Sentinel-1 naming convention. Alternatively the user can choose to download all orbit files for a given date range or download the full archive.
 
 ## Required Python dependencies
 
