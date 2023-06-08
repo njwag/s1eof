@@ -9,7 +9,7 @@ Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](ht
 Run the following command to install dependencies from requirements.txt:
 
 ```console
-pip install -r path\to\requirements.txt
+$ pip install -r path\to\requirements.txt
 ```
 
 ## Using the Sentinel-1 Orbit File Downloader
