@@ -1,5 +1,4 @@
 # Sentinel-1 Orbit File Downloader
-Author: Nicolas Wagener
 
 ## General information
 
@@ -15,27 +14,31 @@ pip install -r path\to\requirements.txt
 
 ## Using the Sentinel-1 Orbit File Downloader
 
+Run s1eof.py in the command line. You can either pass a start and end date using the -s and -e flags respectively. Alternatively, you can pass a Sentinel-1 directory using the -d flag containing Sentinel-1 files (zipped or unzipped) that follow the Sentinel-1 naming convention. Fitting orbit files will be identified and downloaded automatically.
+
+The orbit directory (-o flag) is mandatory. This is where the downloaded orbit files will be stored.
+
 ```console
 s1eof.py [-h] [-d SENTINEL1 DIRECTORY] [-s START DATE] [-e END DATE] [-o] Orbit Directory
 ```
 
 ```console
-& python s1eof.py -h
+$ python s1eof.py -h
 
-usage: s1eof.py [-h] [-d SENTINEL1 DIRECTORY] [-s START DATE] [-e END DATE] [-o] Orbit Directory
+	usage: s1eof.py [-h] [-d SENTINEL1 DIRECTORY] [-s START DATE] [-e END DATE] [-o] Orbit Directory
 
-Download Sentinel-1 orbit files
+	Download Sentinel-1 orbit files
 
-positional arguments:
-  Orbit Directory       Location where orbit files will be stored
+	positional arguments:
+	  Orbit Directory       Location where orbit files will be stored
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -d SENTINEL1 DIRECTORY, --Sentinel1 Directory SENTINEL1 DIRECTORY
-                        Directory where S1 files are stored
-  -s START DATE, --Start date START DATE
-                        Start date for orbit file search "YYYY-MM-DD"
-  -e END DATE, --End date END DATE
-                        End date for orbit file search "YYYY-MM-DD"
-  -o, --overwrite       Overwrite output file (if present)
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -d SENTINEL1 DIRECTORY, --Sentinel1 Directory SENTINEL1 DIRECTORY
+							Directory where S1 files are stored
+	  -s START DATE, --Start date START DATE
+							Start date for orbit file search "YYYY-MM-DD"
+	  -e END DATE, --End date END DATE
+							End date for orbit file search "YYYY-MM-DD"
+	  -o, --overwrite       Overwrite output file (if present)
 ```
