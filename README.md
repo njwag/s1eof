@@ -19,7 +19,7 @@ Run s1eof.py in the command line. You can either pass a start and end date using
 The orbit directory (-o flag) is mandatory. This is where the downloaded orbit files will be stored.
 
 ```console
-s1eof.py [-h] [-d SENTINEL1 DIRECTORY] [-s START DATE] [-e END DATE] [-o] Orbit Directory
+$ s1eof.py [-h] [-d SENTINEL1 DIRECTORY] [-s START DATE] [-e END DATE] [-o] Orbit Directory
 ```
 
 ```console
