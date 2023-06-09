@@ -4,7 +4,20 @@
 
 Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](https://scihub.copernicus.eu/gnss/#/home). The software can automatically detect Sentinel-1 files (zipped or unzipped) that conform to the Sentinel-1 naming convention. Alternatively the user can choose to download all orbit files for a given date range or download the full archive.
 
+## Contents
+
+* `s1eof.py` - main script to be run with Python
+* `utils/` - download functions
+* `tests/` - basic test routines
+
 ## Installation and required Python dependencies
+
+The first step is to clone the s1eof repository and check out the s1eof directory.
+
+```console
+$ git clone https://github.com/CCI-Tools/cate.git
+$ cd cate
+```
 
 Run the following command to install dependencies from requirements.txt:
 
