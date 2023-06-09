@@ -30,7 +30,7 @@ def main():
     parser.add_argument('-e', '--End date', type=str,
                                 help='End date for orbit file search \"YYYY-MM-DD\"') #, widget='DateChooser')
     parser.add_argument(
-        "-o", "--overwrite", action="store_true", help="Overwrite output file (if present)")
+        "-o", "--overwrite", action="store_true", help="Overwrite output file (if present). Default is False.")
 
     parser.parse_args()
     args = vars(parser.parse_args())
