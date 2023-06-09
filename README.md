@@ -4,12 +4,26 @@
 
 Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](https://scihub.copernicus.eu/gnss/#/home). The software can automatically detect Sentinel-1 files (zipped or unzipped) that conform to the Sentinel-1 naming convention. Alternatively the user can choose to download all orbit files for a given date range or download the full archive.
 
-## Required Python dependencies
+## Installation and required Python dependencies
 
 Run the following command to install dependencies from requirements.txt:
 
 ```console
 $ pip install -r path\to\requirements.txt
+```
+
+Using conda:
+
+```console
+$ conda create --name s1eof
+$ conda activate s1eof
+$ pip install -r path\to\requirements.txt
+```
+
+Alternatively, using conda you can install all required dependencies in a new environment called s1eof using the environment.yml file:
+
+```console
+$ conda env create -f path\to\environment.yml
 ```
 
 ## Using the Sentinel-1 Orbit File Downloader
