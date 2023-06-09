@@ -15,8 +15,8 @@ Downloads Sentinel-1 orbit files from the [Copernicus Sentinels POD Data Hub](ht
 The first step is to clone the s1eof repository and check out the s1eof directory.
 
 ```console
-$ git clone https://github.com/CCI-Tools/cate.git
-$ cd cate
+$ git clone https://github.com/njwag/s1eof.git
+$ cd s1eof
 ```
 
 Run the following command to install dependencies from requirements.txt:
