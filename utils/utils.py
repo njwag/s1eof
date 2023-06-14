@@ -175,8 +175,14 @@ def get_orbits(URLs,username='gnssguest',password='gnssguest',daterange=False):
                 
         elif check_internet() == False:
             print('No internet connection.')
-        
-    return(download_list)
+    
+    if not download_list:
+        print("No orbit files found. Check date range. \n"+
+              "Note: aux_poeorb files are available 20 days after image acquisition \n"+
+              "aux_resorb files are available 0 to 1 days after image acquisition. \n"+
+              "Date range must be within Sentinel-1 mission life time.")
+    else:
+        return(download_list)
 
 
 def download_orbits(download_list,orbitfolder,username='gnssguest',password='gnssguest'):

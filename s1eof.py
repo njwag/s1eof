@@ -7,36 +7,29 @@ from gooey import Gooey, GooeyParser
 
 #%%
 
-
-# @Gooey(dump_build_config=True, 
-#        program_name="Sentinel-1 EOF Downloader", 
-#        default_size=(610, 530),
-#        required_cols=1,
-#        optional_cols=1
-#        )
 def main():
     desc = "Download Sentinel-1 orbit files"
 
-    #parser = GooeyParser(description=desc)
     parser = argparse.ArgumentParser(description=desc)
 
-    parser.add_argument(
-        "Orbit Directory", help="Location where orbit files will be stored") #, widget="DirChooser")
+    parser.add_argument("Orbit Directory", 
+                        help="Location where orbit files will be stored")
     
-    parser.add_argument( '-d',
-        "--Sentinel1 Directory", help="Directory where S1 files are stored") #, widget="DirChooser")
-    parser.add_argument('-s', '--Start date', type=str,
-                                help='Start date for orbit file search \"YYYY-MM-DD\"') #, widget='DateChooser')
-    parser.add_argument('-e', '--End date', type=str,
-                                help='End date for orbit file search \"YYYY-MM-DD\"') #, widget='DateChooser')
-    parser.add_argument(
-        "-o", "--overwrite", action="store_true", help="Overwrite output file (if present). Default is False.")
+    parser.add_argument( '-d',"--Sentinel1 Directory", 
+                        help="Directory where S1 files are stored")
+    
+    parser.add_argument('-s', '--Start date', type=str, 
+                        help='Start date for orbit file search \"YYYY-MM-DD\"')
+    
+    parser.add_argument('-e', '--End date', type=str, 
+                        help='End date for orbit file search \"YYYY-MM-DD\"')
+    
+    parser.add_argument("-o", "--overwrite", action="store_true", 
+                        help="Overwrite output file (if present). Default is False.")
 
     parser.parse_args()
     args = vars(parser.parse_args())
     return(args)
-    #display_message()
-
 
 def is_date(string, fuzzy=False):
     """
