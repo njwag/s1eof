@@ -16,6 +16,12 @@ def check_internet():
     except requests.ConnectionError:
         return False
 
+def check_valid_daterange(date):
+    now = datetime.now()
+    if date > now:
+        print("Date {:%Y-%m-%d} is in future and will be removed.".format(date))
+        return(False)
+    #[i[-2:] for i in download_dates]
 
 def check_existing(s1dir):
     """
@@ -36,7 +42,7 @@ def check_existing(s1dir):
     """
     download_dates = []
     for f in listdir(s1dir):
-            if re.match('S1[AB]_.._...._[12][SA](SH|SV|DH|DV)_\d{8}T\d{6}_\d{8}T\d{6}_\w{18}\..*$',f): #regex expression
+            if re.match('S1[AB]_.._...._[12][SA](SH|SV|DH|DV)_\d{8}T\d{6}_\d{8}T\d{6}_\w{18}\..*$',f):
                 satellite = f[1:3]
                 date = datetime.strptime(f[17:25],'%Y%m%d')
                 start = date - timedelta(days=1)
